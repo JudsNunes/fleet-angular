@@ -37,7 +37,7 @@ import { NotificationService } from '../../../../core/services/notification.serv
       </div>
     </form>
   `,
-  styles: [`.form-container { max-width: 700px; display: flex; flex-direction: column; gap: 4px; } .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }`],
+  styles: [`.form-container { max-width: 700px; display: flex; flex-direction: column; gap: 16px; } .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }`],
 })
 export class TripFormComponent implements OnInit {
   private readonly fb = inject(FormBuilder);
