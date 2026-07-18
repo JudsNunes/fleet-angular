@@ -94,6 +94,13 @@ import { DateFormatPipe } from '../../../../core/pipes/date-format.pipe';
     .badge-active { background: #e8f5e9; color: #2e7d32; }
     .badge-inactive { background: #fce4ec; color: #c62828; }
     .badge-in_maintenance { background: #fff3e0; color: #e65100; }
+    .badge-retired { background: #e0e0e0; color: #616161; }
+    .badge-scheduled { background: #e3f2fd; color: #1565c0; }
+    .badge-planned { background: #e3f2fd; color: #1565c0; }
+    .badge-in_progress { background: #fff3e0; color: #e65100; }
+    .badge-completed { background: #e8f5e9; color: #2e7d32; }
+    .badge-cancelled { background: #fce4ec; color: #c62828; }
+    .badge-pending { background: #f3e5f5; color: #7b1fa2; }
   `],
 })
 export class VehicleDetailComponent implements OnInit {

@@ -44,6 +44,7 @@ import { DateFormatPipe } from '../../../../core/pipes/date-format.pipe';
     .badge-valid { background: #e8f5e9; color: #2e7d32; }
     .badge-expired { background: #fce4ec; color: #c62828; }
     .badge-suspended { background: #fff3e0; color: #e65100; }
+    .badge-pending { background: #f3e5f5; color: #7b1fa2; }
   `],
 })
 export class DriverDetailComponent implements OnInit {
