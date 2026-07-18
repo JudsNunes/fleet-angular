@@ -78,7 +78,7 @@ import { NotificationService } from '../../../../core/services/notification.serv
       max-width: 700px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 16px;
     }
     .form-row {
       display: flex;

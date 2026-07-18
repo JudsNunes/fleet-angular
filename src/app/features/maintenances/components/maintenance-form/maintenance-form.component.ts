@@ -47,7 +47,7 @@ import { MaintenanceTypeEnum } from '../../../../core/models/enums';
       </div>
     </form>
   `,
-  styles: [`.form-container { max-width: 700px; display: flex; flex-direction: column; gap: 4px; } .form-row { display: flex; gap: 16px; } .form-row mat-form-field { flex: 1; } .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }`],
+  styles: [`.form-container { max-width: 700px; display: flex; flex-direction: column; gap: 16px; } .form-row { display: flex; gap: 16px; } .form-row mat-form-field { flex: 1; } .form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }`],
 })
 export class MaintenanceFormComponent implements OnInit {
   private readonly fb = inject(FormBuilder);

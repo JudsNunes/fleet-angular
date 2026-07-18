@@ -96,7 +96,7 @@ import { VehicleStatusEnum, FuelTypeEnum } from '../../../../core/models/enums';
       max-width: 700px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 16px;
     }
     .form-row {
       display: flex;
