@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -38,9 +38,9 @@ interface NavItem {
               }
             </mat-expansion-panel>
           } @else {
-            <a mat-list-item [routerLink]="item.route" routerLinkActive="active-link" class="nav-item">
-              <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-              <span matListItemTitle>{{ item.label }}</span>
+            <a [routerLink]="item.route" routerLinkActive="active-link" class="nav-item">
+              <mat-icon>{{ item.icon }}</mat-icon>
+              <span>{{ item.label }}</span>
             </a>
           }
         }
@@ -76,10 +76,20 @@ interface NavItem {
       margin: 0 8px;
       padding: 8px 12px;
       border-radius: 8px;
-      height: auto;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      cursor: pointer;
     }
     .nav-item:hover {
       background: rgba(255,255,255,0.1);
+    }
+    .nav-item .mat-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
     }
     .active-link {
       background: rgba(63, 81, 181, 0.3) !important;
@@ -91,27 +101,44 @@ interface NavItem {
       box-shadow: none !important;
       margin: 0 8px;
       padding: 0;
+      border-radius: 8px;
     }
     ::ng-deep .mat-expansion-panel-header {
       color: rgba(255,255,255,0.8);
       padding: 8px 12px;
       height: 44px;
+      border-radius: 8px;
+    }
+    ::ng-deep .mat-expansion-panel-header:hover {
+      background: rgba(255,255,255,0.1);
     }
     ::ng-deep .mat-expansion-panel-header-title {
       margin: 0;
       gap: 12px;
+      align-items: center;
     }
     ::ng-deep .mat-expansion-panel-header-title mat-icon {
       margin-right: 0;
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
     }
     ::ng-deep .mat-expansion-panel-body {
       padding: 0 0 4px 0;
     }
     ::ng-deep mat-expansion-panel mat-list-item {
       margin: 0 8px;
-      padding: 6px 12px;
-      border-radius: 6px;
-      height: auto;
+      padding: 8px 12px;
+      border-radius: 8px;
+      height: 44px;
+      color: rgba(255,255,255,0.8);
+    }
+    ::ng-deep mat-expansion-panel mat-list-item:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    ::ng-deep mat-expansion-panel mat-list-item.active-link {
+      background: rgba(63, 81, 181, 0.3) !important;
+      color: white !important;
     }
   `],
 })
