@@ -1,0 +1,10 @@
+project: fleet-angular
+version: 1.0.0-MVP
+spec_version: "3.1.0"
+generator:
+  tool: @openapitools/openapi-generator-cli
+  language: typescript-angular
+  output: src/app/core/api-generated
+source:
+  backend: ../fleet
+  spec_file: evolutech-fleet.yaml
