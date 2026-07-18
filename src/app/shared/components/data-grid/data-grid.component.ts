@@ -1,4 +1,4 @@
-import { Component, input, output, signal } from '@angular/core';
+import { Component, input, output, signal, effect } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { MatSortModule, Sort } from '@angular/material/sort';
@@ -102,13 +102,11 @@ export class DataGridComponent<T> {
   displayedColumns = signal<string[]>([]);
 
   constructor() {
-    // Resolve displayed columns from columns input
-    const interval = setInterval(() => {
+    effect(() => {
       if (this.columns().length > 0) {
         this.displayedColumns.set(this.columns().map(c => c.key));
-        clearInterval(interval);
       }
-    });
+    }, { allowSignalWrites: true });
   }
 
   onPageChange(event: PageEvent): void {
